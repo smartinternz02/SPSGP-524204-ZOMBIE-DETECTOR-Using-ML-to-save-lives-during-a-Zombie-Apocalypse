@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zombie Detector</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Zombie Detector</h1>
+  <form action="/login" method="post">
+    <p class="dark-grey-text">Enter the details of the available supplies!!</p>
+    <p>Age</p>
+    <p><input type="number" name="age" min="1" max="100" /></p>
+    
+    <p>Water supply(in L)</p>
+    <p><input type="number" name="water" /></p>
+    
+    <p>Rurality</p>
+    <select name="rurality">
+    <option value="">Select an option</option>
+    <option value="Urban">Urban</option>
+    <option value="Sub-Urban">Sub-urban</option>
+    <option value="Rural">Rural</option>
+    </select>
+
+    <p>Food Supply</p>
+    <select name="food">
+    <option value="">Select an option</option>
+    <option value="Food">Food</option>
+    <option value="No Food">No Food</option>
+    </select>
+
+    <p>Medicine Supply</p>
+    <select name="medicine">
+    <option value="">Select an option</option>
+    <option value="Medicine">Medicine</option>
+    <option value="No Medicine">No Medicine</option>
+    </select>
+
+    <p>Sanitation Supply</p>
+    <select name="sanitation">
+    <option value="">Select an option</option>
+    <option value="Sanitation">Sanitation</option>
+    <option value="No Sanitation">No Sanitation</option>
+    </select>
+
+    <p><input type="submit" value="Submit" /></p>
+  </form>
+  <b class="white-text">{{ y }}</b>
+</body>
+</html>
